@@ -38,3 +38,42 @@ a,
 button {
   text-underline-offset: 0.25rem;
 }
+
+.typing-tagline {
+  width: fit-content;
+  max-width: 100%;
+  animation:
+    typing-reveal 3.2s steps(68, end) both,
+    typing-caret 0.9s step-end infinite;
+}
+
+@keyframes typing-reveal {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: min(100%, 43rem);
+  }
+}
+
+@keyframes typing-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing-tagline {
+    animation: none;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 640px) {
+  .typing-tagline {
+    animation: none;
+    white-space: normal;
+    border-right: 0;
+  }
+}

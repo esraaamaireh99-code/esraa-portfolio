@@ -1,83 +1,137 @@
-import { ButtonLink } from "@/components/ui/button-link";
-import { GlassCard } from "@/components/ui/glass-card";
+import Image from "next/image";
+import Link from "next/link";
 import { MotionReveal } from "@/components/ui/motion-reveal";
 import { portfolio } from "@/data/portfolio";
 
-const badgeStyles = {
-  teal: "bg-teal-100 text-teal-900 ring-teal-200",
-  purple: "bg-purple-100 text-purple-900 ring-purple-200",
-  coral: "bg-rose-100 text-rose-900 ring-rose-200",
-  cream: "bg-amber-100 text-amber-950 ring-amber-200",
-  navy: "bg-slate-900 text-white ring-slate-700",
+const logoPath = "/logo/esraa-logo-light-purple.svg";
+
+const socialIcon = {
+  GitHub: "GH",
+  LinkedIn: "IN",
+  Email: "@",
 };
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative overflow-hidden px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
-      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+    <section
+      id="home"
+      className="relative isolate min-h-screen overflow-hidden bg-[#050314] px-5 pt-24 text-white sm:px-8 lg:px-12"
+    >
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(167,139,250,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(167,139,250,0.08)_1px,transparent_1px)] bg-[size:56px_56px]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_22%,rgba(139,92,246,0.34),transparent_32rem),radial-gradient(circle_at_82%_18%,rgba(167,139,250,0.2),transparent_30rem),linear-gradient(135deg,#050314_0%,#0B0620_48%,#160B35_100%)]" />
+      <div className="absolute left-[8%] top-32 h-2 w-2 rounded-sm bg-[#A78BFA]/70 shadow-[0_0_22px_rgba(167,139,250,0.9)]" />
+      <div className="absolute right-[18%] top-44 h-3 w-3 rounded-sm border border-[#A78BFA]/50 bg-white/5 shadow-[0_0_28px_rgba(139,92,246,0.7)]" />
+      <div className="absolute bottom-28 left-[18%] h-2.5 w-2.5 rounded-full bg-[#8B5CF6]/80 shadow-[0_0_24px_rgba(139,92,246,0.85)]" />
+      <div className="absolute bottom-44 right-[9%] h-12 w-12 rounded-[1rem] border border-[#A78BFA]/20 bg-white/[0.03] backdrop-blur" />
+
+      <div className="relative mx-auto grid min-h-[calc(100vh-6rem)] max-w-7xl items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr]">
         <MotionReveal>
-          <p className="inline-flex rounded-full bg-white/70 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-teal-800 ring-1 ring-white/80 backdrop-blur">
-            {portfolio.person.title}
-          </p>
-          <h1 className="mt-5 max-w-4xl text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
-            {portfolio.hero.headline}
-          </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700">
-            {portfolio.hero.subheadline}
-          </p>
-          <div className="mt-7 flex flex-wrap gap-3">
-            {portfolio.hero.badges.map((badge) => (
-              <span
-                key={badge.label}
-                className={`rounded-full px-4 py-2 text-sm font-semibold ring-1 transition hover:-translate-y-0.5 ${badgeStyles[badge.tone]}`}
-              >
-                {badge.label}
+          <div className="max-w-4xl">
+            <p className="inline-flex rounded-full border border-[#A78BFA]/25 bg-white/[0.08] px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-[#C4B5FD] shadow-lg shadow-purple-950/30 backdrop-blur">
+              Full Stack Developer
+            </p>
+            <h1 className="mt-7 text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
+              Full Stack Developer
+              <span className="block bg-gradient-to-r from-white via-[#C4B5FD] to-[#8B5CF6] bg-clip-text text-transparent">
+                building scalable web applications,
               </span>
-            ))}
-          </div>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            {portfolio.hero.actions.map((action) => (
-              <ButtonLink key={action.href} href={action.href} download={action.download} variant={action.variant}>
-                {action.label}
-              </ButtonLink>
-            ))}
+              CMS platforms, and reliable backend systems.
+            </h1>
+            <p className="typing-tagline mt-7 max-w-3xl overflow-hidden whitespace-nowrap border-r border-[#A78BFA] text-base font-medium text-[#C7C7D9] sm:text-lg">
+              Driven by clean code, scalable architecture, and continuous learning.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              {portfolio.person.specialties.map((specialty) => (
+                <span
+                  key={specialty}
+                  className="rounded-full border border-[#A78BFA]/25 bg-white/[0.08] px-4 py-2 text-sm font-semibold text-[#C7C7D9] backdrop-blur transition duration-200 hover:-translate-y-0.5 hover:border-[#A78BFA]/60 hover:text-white hover:shadow-lg hover:shadow-purple-900/20"
+                >
+                  {specialty}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/resume"
+                className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#050314] px-6 py-3 text-sm font-semibold text-white shadow-[0_0_30px_rgba(139,92,246,0.45)] ring-1 ring-[#8B5CF6]/60 transition duration-200 hover:-translate-y-0.5 hover:bg-[#0B0620]"
+              >
+                View Resume
+              </Link>
+              <a
+                href={portfolio.resume.downloadUrl}
+                download
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#A78BFA]/45 bg-transparent px-6 py-3 text-sm font-semibold text-[#C4B5FD] transition duration-200 hover:-translate-y-0.5 hover:border-[#C4B5FD] hover:bg-[#8B5CF6]/10 hover:text-white"
+              >
+                Download CV
+              </a>
+              <Link
+                href="/#contact"
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#A78BFA]/25 bg-white/[0.06] px-6 py-3 text-sm font-semibold text-[#C7C7D9] backdrop-blur transition duration-200 hover:-translate-y-0.5 hover:border-[#A78BFA] hover:text-white"
+              >
+                Contact Me
+              </Link>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3" aria-label="Social links">
+              {portfolio.socialItems.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noreferrer" : undefined}
+                  aria-label={item.label}
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#A78BFA]/25 bg-white/[0.06] text-sm font-bold text-[#C4B5FD] transition duration-200 hover:-translate-y-0.5 hover:border-[#A78BFA] hover:bg-[#8B5CF6]/20 hover:text-white hover:shadow-lg hover:shadow-purple-900/30"
+                >
+                  {socialIcon[item.label as keyof typeof socialIcon]}
+                </a>
+              ))}
+            </div>
           </div>
         </MotionReveal>
 
-        <MotionReveal delay={0.12}>
-          <GlassCard className="p-6">
-            <div className="rounded-[1.25rem] bg-gradient-to-br from-slate-950 via-slate-900 to-teal-950 p-6 text-white shadow-lg shadow-slate-900/20">
-              <p className="text-sm font-medium text-teal-200">Core specialties</p>
-              <div className="mt-5 flex flex-wrap gap-3">
-                {portfolio.person.specialties.map((specialty) => (
-                  <span key={specialty} className="rounded-full bg-white/10 px-4 py-2 text-sm ring-1 ring-white/10">
-                    {specialty}
-                  </span>
-                ))}
+        <MotionReveal delay={0.14}>
+          <div className="relative mx-auto hidden w-full max-w-xl lg:block">
+            <div className="absolute inset-6 rounded-full bg-[#8B5CF6]/30 blur-3xl" />
+            <div className="relative rotate-[-2deg] rounded-[2rem] border border-[#A78BFA]/25 bg-white/[0.07] p-5 shadow-2xl shadow-purple-950/40 backdrop-blur-xl">
+              <div className="flex items-center gap-2 border-b border-[#A78BFA]/20 pb-4">
+                <span className="h-3 w-3 rounded-full bg-[#8B5CF6]" />
+                <span className="h-3 w-3 rounded-full bg-[#A78BFA]" />
+                <span className="h-3 w-3 rounded-full bg-[#C4B5FD]" />
+                <span className="ml-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#C7C7D9]">
+                  portfolio.tsx
+                </span>
+              </div>
+              <div className="space-y-3 py-6 font-mono text-sm leading-7 text-[#C7C7D9]">
+                <p>
+                  <span className="text-[#A78BFA]">const</span>{" "}
+                  <span className="text-white">developer</span>{" "}
+                  <span className="text-[#C4B5FD]">=</span> {"{"}
+                </p>
+                <p className="pl-5">
+                  role: <span className="text-[#C4B5FD]">&quot;Full Stack Developer&quot;</span>,
+                </p>
+                <p className="pl-5">
+                  focus: <span className="text-[#C4B5FD]">&quot;Laravel, React, Next.js&quot;</span>,
+                </p>
+                <p className="pl-5">
+                  mindset: <span className="text-[#C4B5FD]">&quot;clean, scalable, reliable&quot;</span>
+                </p>
+                <p>{"}"}</p>
+              </div>
+              <div className="rounded-[1.5rem] border border-[#A78BFA]/20 bg-[#050314]/60 p-6">
+                <Image
+                  src={logoPath}
+                  alt="Esraa Amaireh"
+                  width={720}
+                  height={240}
+                  className="mx-auto h-auto w-full max-w-sm drop-shadow-[0_0_28px_rgba(167,139,250,0.45)]"
+                  priority
+                />
               </div>
             </div>
-            <dl className="mt-6 grid grid-cols-2 gap-4">
-              {portfolio.stats.map((stat) => (
-                <div key={stat.label} className="rounded-2xl border border-white/80 bg-white/65 p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                  <dt className="text-sm text-slate-500">{stat.label}</dt>
-                  <dd className="mt-1 text-2xl font-semibold text-slate-950">{stat.value}</dd>
-                </div>
-              ))}
-            </dl>
-            <div className="mt-6 grid gap-3">
-              {portfolio.experience.slice(0, 2).map((role) => (
-                <div
-                  key={role.company}
-                  className="rounded-2xl border border-teal-100 bg-gradient-to-r from-teal-50/90 to-purple-50/80 p-4"
-                >
-                  <p className="text-sm font-semibold text-slate-950">{role.position}</p>
-                  <p className="mt-1 text-sm text-slate-600">
-                    {role.company} &middot; {role.period}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </GlassCard>
+          </div>
         </MotionReveal>
       </div>
     </section>
