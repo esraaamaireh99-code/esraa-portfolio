@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { portfolio } from "@/data/portfolio";
 
@@ -11,10 +12,13 @@ export function Header() {
         className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12"
       >
         <Link href="/" className="inline-flex items-center" aria-label="Go to homepage">
-          <img
+          <Image
             src={logoPath}
             alt="Esraa Amaireh"
+            width={160}
+            height={48}
             className="h-9 w-auto transition duration-200 hover:scale-[1.03] sm:h-10"
+            priority
           />
         </Link>
         <div className="hidden items-center gap-6 text-sm font-medium text-slate-600 md:flex">

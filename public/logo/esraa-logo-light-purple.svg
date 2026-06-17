@@ -1,10 +1,52 @@
-<svg width="160" height="48" viewBox="0 0 160 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Esraa Amaireh logo</title>
-  <desc id="desc">Light purple monogram logo for Esraa Amaireh</desc>
-  <rect x="1" y="1" width="46" height="46" rx="18" fill="#FCFAFF" stroke="#E9D5FF" stroke-width="2"/>
-  <path d="M15 31.5L23.8 13.5H25.9L34.8 31.5H31.1L29.2 27.4H20.4L18.5 31.5H15ZM21.7 24.6H27.9L24.8 17.9L21.7 24.6Z" fill="#A855F7"/>
-  <path d="M54 17.2H76.6V21.1H59.1V23.9H74.9V27.6H59.1V30.8H76.9V34.8H54V17.2Z" fill="#1E1B4B"/>
-  <path d="M82.6 34.8V17.2H87.4L99.7 28.3V17.2H104.5V34.8H99.9L87.4 23.4V34.8H82.6Z" fill="#1E1B4B"/>
-  <path d="M111.1 34.8L121.1 17.2H126.2L136.2 34.8H130.8L129.1 31.6H118.1L116.4 34.8H111.1ZM120.1 27.9H127.1L123.6 21.4L120.1 27.9Z" fill="#A855F7"/>
-  <circle cx="148" cy="24" r="5" fill="#C084FC"/>
+<svg width="720" height="240" viewBox="0 0 720 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="purpleGradient" x1="90" y1="35" x2="250" y2="205" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E9D5FF"/>
+      <stop offset="45%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="textGradient" x1="295" y1="70" x2="560" y2="165" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7E22CE"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="720" height="240" rx="34" fill="#FAF7FF"/>
+
+  <circle cx="615" cy="45" r="54" fill="#E9D5FF" opacity="0.45"/>
+  <circle cx="660" cy="195" r="78" fill="#F3E8FF" opacity="0.65"/>
+
+  <g filter="url(#softGlow)">
+    <path d="M166 38L242 82V158L166 202L90 158V82L166 38Z"
+          stroke="url(#purpleGradient)" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M190 84H142C128 84 118 94 118 108V132C118 146 128 156 142 156H190"
+          stroke="url(#purpleGradient)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M139 120H204"
+          stroke="url(#purpleGradient)" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="166" cy="38" r="17" fill="#C084FC"/>
+    <circle cx="90" cy="158" r="17" fill="#D8B4FE"/>
+    <circle cx="242" cy="158" r="17" fill="#A855F7"/>
+  </g>
+
+  <text x="300" y="130"
+        font-family="Inter, Poppins, Arial, sans-serif"
+        font-size="76"
+        font-weight="800"
+        letter-spacing="-3"
+        fill="url(#textGradient)">Esraa</text>
+
+  <text x="305" y="165"
+        font-family="Inter, Poppins, Arial, sans-serif"
+        font-size="22"
+        font-weight="500"
+        letter-spacing="6"
+        fill="#7E22CE"
+        opacity="0.82">FULL STACK DEV</text>
 </svg>

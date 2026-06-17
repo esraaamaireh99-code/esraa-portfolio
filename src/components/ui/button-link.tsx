@@ -11,7 +11,7 @@ const styles = {
   primary:
     "bg-[#1E1B4B] text-white shadow-lg shadow-purple-900/20 hover:-translate-y-0.5 hover:bg-[#A855F7] hover:shadow-xl",
   secondary:
-    "bg-white/85 text-slate-950 ring-1 ring-white/80 shadow-sm backdrop-blur hover:-translate-y-0.5 hover:bg-rose-50 hover:ring-rose-200",
+    "bg-white/85 text-[#1E1B4B] ring-1 ring-[#E9D5FF] shadow-sm backdrop-blur hover:-translate-y-0.5 hover:bg-[#F3E8FF] hover:ring-[#C084FC]",
   ghost:
     "bg-[#F3E8FF]/90 text-[#1E1B4B] ring-1 ring-[#E9D5FF] hover:-translate-y-0.5 hover:bg-purple-50 hover:text-purple-900 hover:ring-purple-200",
 };
