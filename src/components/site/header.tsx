@@ -29,7 +29,7 @@ export function Header() {
             alt="Esraa Amaireh"
             width={190}
             height={200}
-            className="h-20 w-full transition duration-200 hover:scale-[1.03] sm:h-10"
+            className="h-20 w-full scale-250 transition duration-200 hover:scale-[1.03] sm:h-10"
             priority
           />
         </Link>
