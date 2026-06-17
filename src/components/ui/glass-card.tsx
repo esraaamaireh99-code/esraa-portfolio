@@ -16,7 +16,7 @@ export function GlassCard<T extends ElementType = "div">({
 
   return (
     <Component
-      className={`rounded-[1.5rem] border border-white/70 bg-white/70 shadow-xl shadow-slate-900/10 backdrop-blur-xl ${className}`}
+      className={`rounded-[1.5rem] border border-[#A78BFA]/25 bg-white/[0.06] shadow-xl shadow-purple-950/25 backdrop-blur-xl ${className}`}
       {...props}
     >
       {children}

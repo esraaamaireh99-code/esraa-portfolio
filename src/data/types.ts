@@ -8,11 +8,6 @@ export type Action = NavigationItem & {
   download?: boolean;
 };
 
-export type Badge = {
-  label: string;
-  tone: "teal" | "purple" | "coral" | "cream" | "navy";
-};
-
 export type Experience = {
   company: string;
   location: string;

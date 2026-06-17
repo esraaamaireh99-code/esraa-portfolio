@@ -1,4 +1,4 @@
-import type { Action, Badge, Experience, NavigationItem, Project, SkillGroup } from "./types";
+import type { Action, Experience, NavigationItem, Project, SkillGroup } from "./types";
 
 const resumeDownloadUrl = "/Esraa_Amaireh_CV.pdf";
 
@@ -14,15 +14,6 @@ const heroActions: Action[] = [
   { label: "View Resume", href: "/resume" },
   { label: "Download CV", href: resumeDownloadUrl, download: true, variant: "secondary" },
   { label: "Contact Me", href: "/#contact", variant: "ghost" },
-];
-
-const heroBadges: Badge[] = [
-  { label: "PHP / Laravel", tone: "teal" },
-  { label: "React", tone: "purple" },
-  { label: "Next.js", tone: "navy" },
-  { label: "Kotlin", tone: "coral" },
-  { label: "Spring Boot", tone: "teal" },
-  { label: "Databases", tone: "cream" },
 ];
 
 const experience: Experience[] = [
@@ -160,7 +151,6 @@ export const portfolio = {
     subheadline:
       "I develop responsive frontend interfaces, robust backend services, CMS-driven websites, REST APIs, database architectures, and third-party integrations with a strong focus on clean code, performance, and maintainability.",
     actions: heroActions,
-    badges: heroBadges,
   },
   about:
     "I am a detail-oriented Full Stack Developer with 2+ years of experience building end-to-end web and mobile applications. I have strong experience in React, Next.js, Tailwind CSS, Kotlin, Spring Boot, Node.js, Vert.x, database design, API integrations, and scalable backend systems. Recently, I expanded my expertise into PHP and Laravel, working on CMS-driven platforms, dynamic websites, REST APIs, and admin dashboards.",

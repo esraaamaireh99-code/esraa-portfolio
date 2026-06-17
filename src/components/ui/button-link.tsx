@@ -9,11 +9,11 @@ type ButtonLinkProps = {
 
 const styles = {
   primary:
-    "bg-[#1E1B4B] text-white shadow-lg shadow-purple-900/20 hover:-translate-y-0.5 hover:bg-[#A855F7] hover:shadow-xl",
+    "bg-[#050314] text-white ring-1 ring-[#8B5CF6]/60 shadow-[0_0_30px_rgba(139,92,246,0.35)] hover:-translate-y-0.5 hover:bg-[#0B0620] hover:shadow-[0_0_40px_rgba(139,92,246,0.48)]",
   secondary:
-    "bg-white/85 text-[#1E1B4B] ring-1 ring-[#E9D5FF] shadow-sm backdrop-blur hover:-translate-y-0.5 hover:bg-[#F3E8FF] hover:ring-[#C084FC]",
+    "bg-transparent text-[#C4B5FD] ring-1 ring-[#A78BFA]/45 backdrop-blur hover:-translate-y-0.5 hover:bg-[#8B5CF6]/10 hover:text-white hover:ring-[#C4B5FD]",
   ghost:
-    "bg-[#F3E8FF]/90 text-[#1E1B4B] ring-1 ring-[#E9D5FF] hover:-translate-y-0.5 hover:bg-purple-50 hover:text-purple-900 hover:ring-purple-200",
+    "bg-white/[0.06] text-[#C7C7D9] ring-1 ring-[#A78BFA]/25 backdrop-blur hover:-translate-y-0.5 hover:text-white hover:ring-[#A78BFA]",
 };
 
 export function ButtonLink({
@@ -22,7 +22,7 @@ export function ButtonLink({
   variant = "primary",
   download,
 }: ButtonLinkProps) {
-  const className = `inline-flex min-h-12 items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#A855F7] focus-visible:ring-offset-2 ${styles[variant]}`;
+  const className = `inline-flex min-h-12 items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050314] ${styles[variant]}`;
 
   if (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) {
     return (

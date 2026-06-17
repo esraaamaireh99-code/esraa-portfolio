@@ -4,7 +4,8 @@ import { portfolio } from "@/data/portfolio";
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="px-5 py-16 sm:px-8 lg:px-12">
+    <section id="projects" className="relative px-5 py-16 sm:px-8 lg:px-12">
+      <div className="pointer-events-none absolute right-[12%] top-10 h-72 w-72 rounded-full bg-[#8B5CF6]/16 blur-3xl" />
       <div className="mx-auto max-w-6xl">
         <SectionHeading eyebrow="Projects" title="Selected full stack work" />
         <div className="mt-8 grid gap-6 md:grid-cols-3">

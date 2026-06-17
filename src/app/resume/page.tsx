@@ -18,15 +18,15 @@ export const metadata: Metadata = {
 const logoPath = "/logo/esraa-logo-light-purple.svg";
 
 const sectionClass =
-  "rounded-[2rem] border border-[#E9D5FF] bg-white/72 px-5 py-8 shadow-lg shadow-purple-950/5 backdrop-blur-xl sm:px-8 sm:py-10";
+  "rounded-[2rem] border border-[#A78BFA]/25 bg-white/[0.06] px-5 py-8 shadow-lg shadow-purple-950/25 backdrop-blur-xl sm:px-8 sm:py-10";
 
 function SectionIntro({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
     <div>
-      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#A855F7]">
+      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#A78BFA]">
         {eyebrow}
       </p>
-      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#1E1B4B] sm:text-4xl">
+      <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
         {title}
       </h2>
     </div>
@@ -35,15 +35,15 @@ function SectionIntro({ eyebrow, title }: { eyebrow: string; title: string }) {
 
 export default function ResumePage() {
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-[#FCFAFF] text-[#1E1B4B]">
-      <div className="pointer-events-none absolute -left-28 top-20 h-80 w-80 rounded-full bg-[#E9D5FF]/70 blur-3xl" />
-      <div className="pointer-events-none absolute -right-32 top-96 h-96 w-96 rounded-full bg-[#C084FC]/20 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-20 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-[#F3E8FF]/80 blur-3xl" />
+    <main className="relative min-h-screen overflow-x-hidden text-white">
+      <div className="pointer-events-none absolute -left-28 top-20 h-80 w-80 rounded-full bg-[#8B5CF6]/22 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 top-96 h-96 w-96 rounded-full bg-[#A78BFA]/16 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-20 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-[#8B5CF6]/16 blur-3xl" />
 
       <div className="relative mx-auto max-w-[1120px] px-5 py-5 sm:px-8 lg:px-10">
         <nav
           aria-label="Resume navigation"
-          className="flex flex-col gap-4 rounded-[1.75rem] border border-[#E9D5FF]/80 bg-white/75 px-4 py-4 shadow-md shadow-purple-950/5 backdrop-blur-xl sm:flex-row sm:items-center sm:justify-between"
+          className="flex flex-col gap-4 rounded-[1.75rem] border border-[#A78BFA]/25 bg-white/[0.06] px-4 py-4 shadow-md shadow-purple-950/25 backdrop-blur-xl sm:flex-row sm:items-center sm:justify-between"
         >
           <Link href="/" aria-label="Go to portfolio" className="inline-flex w-fit items-center">
             <Image
@@ -56,17 +56,17 @@ export default function ResumePage() {
             />
           </Link>
 
-          <div className="flex flex-wrap items-center gap-3 text-sm font-semibold text-[#1E1B4B]/70 sm:justify-end">
-            <a className="transition hover:text-[#A855F7]" href="#resume">
+          <div className="flex flex-wrap items-center gap-3 text-sm font-semibold text-[#C7C7D9] sm:justify-end">
+            <a className="transition hover:text-white" href="#resume">
               Resume
             </a>
-            <a className="transition hover:text-[#A855F7]" href="#experience">
+            <a className="transition hover:text-white" href="#experience">
               Experience
             </a>
-            <a className="transition hover:text-[#A855F7]" href="#skills">
+            <a className="transition hover:text-white" href="#skills">
               Skills
             </a>
-            <a className="transition hover:text-[#A855F7]" href="#contact">
+            <a className="transition hover:text-white" href="#contact">
               Contact
             </a>
             <ButtonLink href={portfolio.resume.downloadUrl} download>
@@ -78,16 +78,16 @@ export default function ResumePage() {
         <MotionReveal>
           <header id="resume" className="py-16 sm:py-20 lg:py-24">
             <div className="max-w-4xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#A855F7]">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#A78BFA]">
                 Curriculum Vitae
               </p>
-              <h1 className="mt-5 text-5xl font-semibold tracking-tight text-[#1E1B4B] sm:text-6xl lg:text-7xl">
+              <h1 className="mt-5 text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
                 {portfolio.person.name}
               </h1>
-              <p className="mt-5 text-2xl font-medium text-[#A855F7] sm:text-3xl">
+              <p className="mt-5 text-2xl font-medium text-[#A78BFA] sm:text-3xl">
                 {portfolio.person.title}
               </p>
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-[#1E1B4B]/75">
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-[#C7C7D9]">
                 Building elegant web experiences, reliable backend systems, CMS platforms, REST APIs,
                 and database-driven products with a practical full stack mindset.
               </p>
@@ -99,7 +99,7 @@ export default function ResumePage() {
                     href={item.href}
                     target={item.external ? "_blank" : undefined}
                     rel={item.external ? "noreferrer" : undefined}
-                    className="rounded-full border border-[#E9D5FF] bg-white/75 px-4 py-2 font-semibold text-[#1E1B4B]/75 shadow-sm shadow-purple-950/5 transition duration-200 hover:-translate-y-0.5 hover:border-[#C084FC] hover:bg-[#F3E8FF] hover:text-[#7E22CE]"
+                    className="rounded-full border border-[#A78BFA]/25 bg-white/[0.06] px-4 py-2 font-semibold text-[#C7C7D9] shadow-sm shadow-purple-950/25 transition duration-200 hover:-translate-y-0.5 hover:border-[#A78BFA]/60 hover:text-white"
                   >
                     {item.value}
                   </a>
@@ -113,7 +113,7 @@ export default function ResumePage() {
           <MotionReveal delay={0.05}>
             <section className={sectionClass}>
               <SectionIntro eyebrow="Profile" title="Professional Summary" />
-              <p className="mt-6 max-w-4xl text-base leading-8 text-[#1E1B4B]/75 sm:text-lg">
+              <p className="mt-6 max-w-4xl text-base leading-8 text-[#C7C7D9] sm:text-lg">
                 {portfolio.about}
               </p>
             </section>
@@ -128,25 +128,25 @@ export default function ResumePage() {
                     key={`${role.company}-${role.period}`}
                     className="relative pl-8 sm:pl-12"
                   >
-                    <span className="absolute left-0 top-2 h-[calc(100%+2.5rem)] w-px bg-[#C084FC]" />
-                    <span className="absolute left-[-0.45rem] top-2 h-4 w-4 rounded-full border-4 border-white bg-[#A855F7] shadow-md shadow-purple-900/20" />
+                    <span className="absolute left-0 top-2 h-[calc(100%+2.5rem)] w-px bg-[#A78BFA]" />
+                    <span className="absolute left-[-0.45rem] top-2 h-4 w-4 rounded-full border-4 border-[#050314] bg-[#8B5CF6] shadow-md shadow-purple-900/40" />
 
                     <div className="pb-1">
                       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                         <div>
-                          <h3 className="text-xl font-semibold text-[#1E1B4B]">{role.company}</h3>
-                          <p className="mt-1 font-medium text-[#1E1B4B]/80">{role.position}</p>
-                          <p className="mt-1 text-sm text-[#1E1B4B]/60">{role.location}</p>
+                          <h3 className="text-xl font-semibold text-white">{role.company}</h3>
+                          <p className="mt-1 font-medium text-[#C7C7D9]">{role.position}</p>
+                          <p className="mt-1 text-sm text-[#C7C7D9]/70">{role.location}</p>
                         </div>
-                        <p className="w-fit rounded-full border border-[#E9D5FF] bg-[#F3E8FF] px-4 py-2 text-sm font-semibold text-[#7E22CE]">
+                        <p className="w-fit rounded-full border border-[#A78BFA]/25 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-[#C4B5FD]">
                           {role.period}
                         </p>
                       </div>
 
-                      <ul className="mt-5 grid gap-2 text-sm leading-6 text-[#1E1B4B]/75 sm:grid-cols-2">
+                      <ul className="mt-5 grid gap-2 text-sm leading-6 text-[#C7C7D9] sm:grid-cols-2">
                         {role.highlights.map((highlight) => (
                           <li key={highlight} className="flex gap-3">
-                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#C084FC]" />
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#8B5CF6]" />
                             <span>{highlight}</span>
                           </li>
                         ))}
@@ -164,12 +164,12 @@ export default function ResumePage() {
               <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {portfolio.skills.map((group) => (
                   <div key={group.category}>
-                    <h3 className="font-semibold text-[#1E1B4B]">{group.category}</h3>
+                    <h3 className="font-semibold text-white">{group.category}</h3>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {group.items.map((item) => (
                         <span
                           key={item}
-                          className="rounded-full border border-[#E9D5FF] bg-[#F3E8FF]/80 px-3.5 py-2 text-sm font-medium text-[#1E1B4B]/75 transition duration-200 hover:-translate-y-0.5 hover:bg-white hover:text-[#7E22CE] hover:shadow-md hover:shadow-purple-950/5"
+                          className="rounded-full border border-[#A78BFA]/25 bg-white/[0.06] px-3.5 py-2 text-sm font-medium text-[#C7C7D9] transition duration-200 hover:-translate-y-0.5 hover:border-[#A78BFA]/60 hover:text-white"
                         >
                           {item}
                         </span>
@@ -186,13 +186,13 @@ export default function ResumePage() {
               <section className={`${sectionClass} h-full`}>
                 <SectionIntro eyebrow="Education" title="Education" />
                 <div className="mt-6">
-                  <h3 className="text-lg font-semibold text-[#1E1B4B]">
+                  <h3 className="text-lg font-semibold text-white">
                     {portfolio.education.school}
                   </h3>
-                  <p className="mt-2 leading-7 text-[#1E1B4B]/75">
+                  <p className="mt-2 leading-7 text-[#C7C7D9]">
                     {portfolio.education.degree}
                   </p>
-                  <p className="mt-3 text-sm font-semibold text-[#A855F7]">
+                  <p className="mt-3 text-sm font-semibold text-[#A78BFA]">
                     {portfolio.education.period}
                   </p>
                 </div>
@@ -206,7 +206,7 @@ export default function ResumePage() {
                   {portfolio.certifications.map((certification) => (
                     <span
                       key={certification}
-                      className="rounded-full border border-[#E9D5FF] bg-white/75 px-4 py-2 text-sm font-semibold text-[#1E1B4B]/75 transition duration-200 hover:-translate-y-0.5 hover:bg-[#F3E8FF] hover:text-[#7E22CE]"
+                      className="rounded-full border border-[#A78BFA]/25 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-[#C7C7D9] transition duration-200 hover:-translate-y-0.5 hover:border-[#A78BFA]/60 hover:text-white"
                     >
                       {certification}
                     </span>

@@ -26,18 +26,25 @@ export function HeroSection() {
 
       <div className="relative mx-auto grid min-h-[calc(100vh-6rem)] max-w-7xl items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr]">
         <MotionReveal>
-          <div className="max-w-4xl">
+          <div className="max-w-[760px]">
             <p className="inline-flex rounded-full border border-[#A78BFA]/25 bg-white/[0.08] px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-[#C4B5FD] shadow-lg shadow-purple-950/30 backdrop-blur">
               Full Stack Developer
             </p>
-            <h1 className="mt-7 text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
-              Full Stack Developer
-              <span className="block bg-gradient-to-r from-white via-[#C4B5FD] to-[#8B5CF6] bg-clip-text text-transparent">
-                building scalable web applications,
+            <h1 className="mt-7 text-[clamp(2.4rem,12vw,3.6rem)] font-semibold leading-[0.98] tracking-tight text-white sm:text-[clamp(2.6rem,6vw,4.5rem)] lg:text-[clamp(3rem,7vw,5.8rem)]">
+              <span className="block bg-gradient-to-r from-[#C4B5FD] via-[#A78BFA] to-[#8B5CF6] bg-clip-text text-transparent">
+                Hello, I&apos;m
               </span>
-              CMS platforms, and reliable backend systems.
+              <span className="mt-2 block text-white">Esraa Amaireh</span>
             </h1>
-            <p className="typing-tagline mt-7 max-w-3xl overflow-hidden whitespace-nowrap border-r border-[#A78BFA] text-base font-medium text-[#C7C7D9] sm:text-lg">
+            <p className="mt-7 max-w-[760px] text-base font-semibold leading-7 text-[#EDE9FE] sm:text-[1.18rem] sm:leading-8 lg:text-[1.35rem] lg:leading-9">
+              Full Stack Developer specializing in PHP / Laravel, React, Next.js,
+              backend systems, CMS platforms, and API integrations.
+            </p>
+            <p className="mt-5 max-w-[680px] text-base leading-8 text-[#C7C7D9] sm:text-lg">
+              I build clean, scalable, and maintainable digital experiences across
+              frontend, backend, databases, and third-party integrations.
+            </p>
+            <p className="typing-tagline mt-6 max-w-[680px] overflow-hidden whitespace-nowrap border-r border-[#A78BFA] text-sm font-medium text-[#A78BFA] sm:text-base">
               Driven by clean code, scalable architecture, and continuous learning.
             </p>
 
@@ -52,7 +59,7 @@ export function HeroSection() {
               ))}
             </div>
 
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/resume"
                 className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#050314] px-6 py-3 text-sm font-semibold text-white shadow-[0_0_30px_rgba(139,92,246,0.45)] ring-1 ring-[#8B5CF6]/60 transition duration-200 hover:-translate-y-0.5 hover:bg-[#0B0620]"

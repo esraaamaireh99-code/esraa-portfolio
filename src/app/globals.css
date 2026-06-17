@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fcfaff;
-  --foreground: #0f172a;
+  --background: #050314;
+  --foreground: #ffffff;
 }
 
 @theme inline {
@@ -16,18 +16,21 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 8% 12%, rgba(168, 85, 247, 0.16), transparent 28rem),
-    radial-gradient(circle at 94% 6%, rgba(192, 132, 252, 0.18), transparent 30rem),
-    radial-gradient(circle at 78% 86%, rgba(233, 213, 255, 0.34), transparent 26rem),
-    linear-gradient(135deg, #fcfaff 0%, #ffffff 42%, #f3e8ff 100%);
+    linear-gradient(rgba(167, 139, 250, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167, 139, 250, 0.055) 1px, transparent 1px),
+    radial-gradient(circle at 10% 12%, rgba(139, 92, 246, 0.2), transparent 30rem),
+    radial-gradient(circle at 88% 38%, rgba(167, 139, 250, 0.15), transparent 34rem),
+    radial-gradient(circle at 50% 92%, rgba(139, 92, 246, 0.16), transparent 28rem),
+    linear-gradient(135deg, #050314 0%, #0b0620 52%, #160b35 100%);
+  background-size: 56px 56px, 56px 56px, auto, auto, auto, auto;
   background-attachment: fixed;
   color: var(--foreground);
   font-family: "Inter", "Segoe UI", Arial, sans-serif;
 }
 
 ::selection {
-  background: #e9d5ff;
-  color: #1e1b4b;
+  background: #8b5cf6;
+  color: #ffffff;
 }
 
 section {

@@ -53,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full scroll-smooth">
-      <body className="min-h-full text-slate-950 antialiased">
+      <body className="min-h-full text-white antialiased">
         {children}
       </body>
     </html>

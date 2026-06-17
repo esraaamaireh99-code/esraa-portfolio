@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const logoPath = "/logo/esraa-logo-light-purple.svg";
+const logoPath = "/logo/esraa-logo.png";
 
 const navItems = [
   { label: "Home", href: "/#home" },
@@ -27,9 +27,9 @@ export function Header() {
           <Image
             src={logoPath}
             alt="Esraa Amaireh"
-            width={160}
-            height={48}
-            className="h-9 w-auto transition duration-200 hover:scale-[1.03] sm:h-10"
+            width={190}
+            height={200}
+            className="h-20 w-full transition duration-200 hover:scale-[1.03] sm:h-10"
             priority
           />
         </Link>
