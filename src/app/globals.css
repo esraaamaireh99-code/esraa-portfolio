@@ -28,6 +28,21 @@ body {
   font-family: "Inter", "Segoe UI", Arial, sans-serif;
 }
 
+img,
+svg {
+  max-width: 100%;
+}
+
+p,
+li,
+a,
+span,
+h1,
+h2,
+h3 {
+  overflow-wrap: anywhere;
+}
+
 ::selection {
   background: #8b5cf6;
   color: #ffffff;
@@ -74,6 +89,10 @@ button {
 }
 
 @media (max-width: 640px) {
+  body {
+    background-attachment: scroll;
+  }
+
   .typing-tagline {
     animation: none;
     white-space: normal;

@@ -22,7 +22,7 @@ export function ButtonLink({
   variant = "primary",
   download,
 }: ButtonLinkProps) {
-  const className = `inline-flex min-h-12 items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050314] ${styles[variant]}`;
+  const className = `inline-flex min-h-12 max-w-full items-center justify-center whitespace-normal break-words rounded-full px-6 py-3 text-center text-sm font-semibold transition duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050314] ${styles[variant]}`;
 
   if (href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("tel:")) {
     return (

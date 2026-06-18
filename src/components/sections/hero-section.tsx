@@ -15,7 +15,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative isolate min-h-screen overflow-hidden bg-[#050314] px-5 pt-24 text-white sm:px-8 lg:px-12"
+      className="relative isolate min-h-[100svh] overflow-hidden bg-[#050314] px-4 pt-20 text-white sm:px-6 md:pt-24 lg:px-8"
     >
       <div className="absolute inset-0 bg-[linear-gradient(rgba(167,139,250,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(167,139,250,0.08)_1px,transparent_1px)] bg-[size:56px_56px]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_22%,rgba(139,92,246,0.34),transparent_32rem),radial-gradient(circle_at_82%_18%,rgba(167,139,250,0.2),transparent_30rem),linear-gradient(135deg,#050314_0%,#0B0620_48%,#160B35_100%)]" />
@@ -24,13 +24,13 @@ export function HeroSection() {
       <div className="absolute bottom-28 left-[18%] h-2.5 w-2.5 rounded-full bg-[#8B5CF6]/80 shadow-[0_0_24px_rgba(139,92,246,0.85)]" />
       <div className="absolute bottom-44 right-[9%] h-12 w-12 rounded-[1rem] border border-[#A78BFA]/20 bg-white/[0.03] backdrop-blur" />
 
-      <div className="relative mx-auto grid min-h-[calc(100vh-6rem)] max-w-7xl items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="relative mx-auto grid w-full max-w-7xl min-w-0 items-center gap-12 py-16 md:py-20 lg:min-h-[calc(100svh-6rem)] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:py-24">
         <MotionReveal>
-          <div className="max-w-[760px]">
-            <p className="inline-flex rounded-full border border-[#A78BFA]/25 bg-white/[0.08] px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-[#C4B5FD] shadow-lg shadow-purple-950/30 backdrop-blur">
+          <div className="min-w-0 max-w-[760px] text-center lg:text-left">
+            <p className="inline-flex max-w-full whitespace-normal rounded-full border border-[#A78BFA]/25 bg-white/[0.08] px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#C4B5FD] shadow-lg shadow-purple-950/30 backdrop-blur sm:tracking-[0.24em]">
               Full Stack Developer
             </p>
-            <h1 className="mt-7 text-[clamp(2.4rem,12vw,3.6rem)] font-semibold leading-[0.98] tracking-tight text-white sm:text-[clamp(2.6rem,6vw,4.5rem)] lg:text-[clamp(3rem,7vw,5.8rem)]">
+            <h1 className="mt-7 break-words text-4xl font-semibold leading-[1.02] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem]">
               <span className="block bg-gradient-to-r from-[#C4B5FD] via-[#A78BFA] to-[#8B5CF6] bg-clip-text text-transparent">
                 Hello, I&apos;m
               </span>
@@ -48,18 +48,18 @@ export function HeroSection() {
               Driven by clean code, scalable architecture, and continuous learning.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
               {portfolio.person.specialties.map((specialty) => (
                 <span
                   key={specialty}
-                  className="rounded-full border border-[#A78BFA]/25 bg-white/[0.08] px-4 py-2 text-sm font-semibold text-[#C7C7D9] backdrop-blur transition duration-200 hover:-translate-y-0.5 hover:border-[#A78BFA]/60 hover:text-white hover:shadow-lg hover:shadow-purple-900/20"
+                  className="max-w-full break-words rounded-full border border-[#A78BFA]/25 bg-white/[0.08] px-4 py-2 text-sm font-semibold text-[#C7C7D9] backdrop-blur transition duration-200 hover:-translate-y-0.5 hover:border-[#A78BFA]/60 hover:text-white hover:shadow-lg hover:shadow-purple-900/20"
                 >
                   {specialty}
                 </span>
               ))}
             </div>
 
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
               <Link
                 href="/resume"
                 className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#050314] px-6 py-3 text-sm font-semibold text-white shadow-[0_0_30px_rgba(139,92,246,0.45)] ring-1 ring-[#8B5CF6]/60 transition duration-200 hover:-translate-y-0.5 hover:bg-[#0B0620]"
@@ -81,7 +81,7 @@ export function HeroSection() {
               </Link>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3" aria-label="Social links">
+            <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start" aria-label="Social links">
               {portfolio.socialItems.map((item) => (
                 <a
                   key={item.label}
@@ -99,7 +99,7 @@ export function HeroSection() {
         </MotionReveal>
 
         <MotionReveal delay={0.14}>
-          <div className="relative mx-auto hidden w-full max-w-xl lg:block">
+          <div className="relative mx-auto hidden w-full min-w-0 max-w-xl lg:block">
             <div className="absolute inset-6 rounded-full bg-[#8B5CF6]/30 blur-3xl" />
             <div className="relative rotate-[-2deg] rounded-[2rem] border border-[#A78BFA]/25 bg-white/[0.07] p-5 shadow-2xl shadow-purple-950/40 backdrop-blur-xl">
               <div className="flex items-center gap-2 border-b border-[#A78BFA]/20 pb-4">

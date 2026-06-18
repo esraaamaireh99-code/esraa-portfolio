@@ -21,20 +21,24 @@ export function Header() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[#A78BFA]/15 bg-[#050314]/70 backdrop-blur-xl">
       <nav
         aria-label="Primary navigation"
-        className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12"
+        className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8"
       >
-        <Link href="/" className="inline-flex items-center" aria-label="Go to homepage">
+        <Link
+          href="/"
+          className="inline-flex min-w-0 shrink items-center"
+          aria-label="Go to homepage"
+        >
           <Image
             src={logoPath}
             alt="Esraa Amaireh"
             width={190}
-            height={200}
-            className="h-20 w-full scale-250 transition duration-200 hover:scale-[1.03] sm:h-10"
+            height={64}
+            className="h-auto w-28 max-w-full object-contain transition duration-200 hover:scale-[1.03] sm:w-36 lg:w-40"
             priority
           />
         </Link>
 
-        <div className="hidden items-center gap-7 text-sm font-semibold text-[#C7C7D9] md:flex">
+        <div className="hidden items-center gap-5 text-sm font-semibold text-[#C7C7D9] md:flex lg:gap-7">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -49,7 +53,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#A78BFA]/25 bg-white/[0.06] text-[#C4B5FD] transition hover:border-[#A78BFA] hover:text-white md:hidden"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#A78BFA]/25 bg-white/[0.06] text-[#C4B5FD] transition hover:border-[#A78BFA] hover:text-white md:hidden"
           aria-label="Toggle navigation menu"
           aria-expanded={isOpen}
           onClick={() => setIsOpen((value) => !value)}
@@ -63,13 +67,13 @@ export function Header() {
       </nav>
 
       {isOpen ? (
-        <div className="border-t border-[#A78BFA]/15 bg-[#050314]/95 px-5 py-4 backdrop-blur-xl md:hidden">
-          <div className="mx-auto grid max-w-7xl gap-2">
+        <div className="border-t border-[#A78BFA]/15 bg-[#050314]/95 px-4 py-4 backdrop-blur-xl sm:px-6 md:hidden">
+          <div className="mx-auto grid w-full max-w-7xl gap-2">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-2xl px-4 py-3 text-sm font-semibold text-[#C7C7D9] transition hover:bg-white/[0.06] hover:text-white"
+                className="flex min-h-11 items-center rounded-2xl px-4 py-3 text-sm font-semibold text-[#C7C7D9] transition hover:bg-white/[0.06] hover:text-white"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
