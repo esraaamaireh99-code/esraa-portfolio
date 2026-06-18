@@ -4,7 +4,7 @@ import { portfolio } from "@/data/portfolio";
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="relative px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24">
+    <section id="skills" className="relative overflow-x-clip px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24">
       <div className="pointer-events-none absolute left-1/3 top-16 h-72 w-72 rounded-full bg-[#A78BFA]/12 blur-3xl" />
       <div className="mx-auto w-full max-w-6xl min-w-0">
         <SectionHeading eyebrow="Skills" title="Practical tools for production systems" />

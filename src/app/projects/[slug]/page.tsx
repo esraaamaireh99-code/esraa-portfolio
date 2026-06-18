@@ -45,11 +45,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <article className="mx-auto w-full max-w-4xl min-w-0 rounded-[2rem] border border-[#A78BFA]/25 bg-white/[0.06] p-5 shadow-xl shadow-purple-950/30 backdrop-blur-xl sm:p-8 lg:p-10">
         <Link
           href="/#projects"
-          className="text-sm font-semibold text-[#C4B5FD] transition hover:text-white"
+          className="inline-flex min-h-11 items-center text-sm font-semibold text-[#C4B5FD] transition hover:text-white"
         >
           Back to projects
         </Link>
-        <p className="mt-10 inline-flex rounded-full bg-white/[0.08] px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-[#C4B5FD] ring-1 ring-[#A78BFA]/25">
+        <p className="mt-8 flex w-fit max-w-full rounded-full bg-white/[0.08] px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-[#C4B5FD] ring-1 ring-[#A78BFA]/25">
           Project
         </p>
         <h1 className="mt-3 break-words text-4xl font-semibold tracking-tight text-white sm:text-5xl">

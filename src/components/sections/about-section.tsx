@@ -4,7 +4,7 @@ import { portfolio } from "@/data/portfolio";
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24">
+    <section id="about" className="relative overflow-x-clip px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24">
       <div className="pointer-events-none absolute left-[-8rem] top-8 h-72 w-72 rounded-full bg-[#8B5CF6]/20 blur-3xl" />
       <MotionReveal className="mx-auto w-full max-w-5xl min-w-0">
         <div className="min-w-0 rounded-[1.75rem] border border-[#A78BFA]/25 bg-white/[0.06] p-5 shadow-2xl shadow-purple-950/30 backdrop-blur-xl sm:p-8">

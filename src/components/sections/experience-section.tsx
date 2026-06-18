@@ -4,7 +4,7 @@ import { portfolio } from "@/data/portfolio";
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="relative px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24">
+    <section id="experience" className="relative overflow-x-clip px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24">
       <div className="pointer-events-none absolute right-[-10rem] top-20 h-80 w-80 rounded-full bg-[#8B5CF6]/18 blur-3xl" />
       <div className="mx-auto w-full max-w-6xl min-w-0">
         <SectionHeading eyebrow="Experience" title="Building across frontend, backend, and mobile" />

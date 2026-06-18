@@ -5,7 +5,7 @@ import { portfolio } from "@/data/portfolio";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="relative px-4 py-16 text-white sm:px-6 md:py-20 lg:px-8 lg:py-24">
+    <section id="contact" className="relative overflow-x-clip px-4 py-16 text-white sm:px-6 md:py-20 lg:px-8 lg:py-24">
       <div className="pointer-events-none absolute inset-x-0 bottom-0 mx-auto h-80 max-w-4xl rounded-full bg-[#8B5CF6]/18 blur-3xl" />
       <MotionReveal className="mx-auto w-full max-w-5xl min-w-0 rounded-[2rem] border border-[#A78BFA]/25 bg-white/[0.06] p-5 shadow-2xl shadow-purple-950/35 backdrop-blur-xl sm:p-8">
         <SectionHeading eyebrow="Contact" title="Available for full stack opportunities" inverse />
