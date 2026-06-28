@@ -129,13 +129,13 @@ export const portfolio = {
     ],
   },
   contact: {
-    phone: "0782065770",
+    phone: "0792012800",
     email: "esraa.amaireh99@gmail.com",
     linkedin: "https://www.linkedin.com/in/esraa-amaireh-a2835823b",
     github: "https://github.com/esraa-amaireh",
   },
   contactItems: [
-    { label: "Phone", value: "0782065770", href: "tel:0782065770" },
+    { label: "Phone", value: "0792012800", href: "tel:0792012800" },
     { label: "Email", value: "esraa.amaireh99@gmail.com", href: "mailto:esraa.amaireh99@gmail.com" },
     { label: "LinkedIn", value: "Esraa Amaireh", href: "https://www.linkedin.com/in/esraa-amaireh-a2835823b", external: true },
   ],
